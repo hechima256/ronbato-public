@@ -1,24 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ディベートSNS「ろんばと」のソースコード。
+2022年から1年間サービス提供したのちに終了した。
+ronbato.com(失効済み)で公開していた。
 
-Things you may want to cover:
+credentialな情報が含まれていたため削除後のコードのみ公開。
 
-* Ruby version
-ruby 3.1.1p18
-* System dependencies
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
