@@ -1,0 +1,38 @@
+<div class="topics_wrapper">
+    <div class="new_wrapper">
+        <div class="centering_container pt-3em pb-3em">
+            <h1>トピックを作成</h1>
+            <%= form_with model: @create_topic_form, local: true, url: topics_path, method: :post do |f| %>
+				<%= render 'layouts/error_messages', object: @create_topic_form %>
+                <div class="field">
+                    <%= f.label :title, "タイトル" %>
+                    <%= f.text_field :title, autofocus: true, autocomplete: "title", class: "form-text" %>
+                </div>
+
+                <div class="field">
+                    <%= f.label :description, "詳細説明" %>
+                    <%= f.text_area :description, autofocus: true, autocomplete: "description", class: "form-text-area" %>
+                </div>
+
+				<div class="field">
+                    <%= f.label :state_content, "主張" %>
+                    <%= f.text_field :state_content, autofocus: true, autocomplete: "state_content", class: "form-text" %>
+                </div>
+
+                <label>イメージ画像</label>
+                <div id="img_bar">
+                    <% (0..3).each do |i| %>
+                        <%= f.radio_button :image, "#{i}" %>
+                        <%= f.label "image_#{i}" do %>
+                            <img src="/topics_imgs/<%=i%>.jpg" alt="イメージ画像<%=i%>">
+                        <% end %>
+                    <% end %>
+                </div>
+
+                <div class="actions mt-30px">
+                    <%= f.submit "作成", class: "btn btn-primary mb-10px" %>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</div>

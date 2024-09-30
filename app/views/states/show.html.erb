@@ -1,0 +1,63 @@
+<div class="states_wrapper">
+    <div class="show_wrapper">
+        <div class="centering_container mb-50px">
+            <div class="topic_info">
+                <div class="topic_img">
+                    <%= image_tag("/topics_imgs/#{@topic.image}") %>
+                </div>
+                <h1><%= @topic.title %></h1>
+                <div class="meta">
+                    <div class="views_num">
+						閲覧数: <%= @topic.view %>
+                    </div>
+                    <div class="states_num">
+						主張数: <%= @topic.states.count %>
+                    </div>
+					<div class="participants_num">
+						参加者: <%= @topic.participants.count %>
+					</div>
+                </div>
+                <div class="description">
+                    <h2>詳細説明</h2>
+                    <p><%= @topic.description %></p>
+                </div>
+                <div class="state">
+                    <h2>主張</h2>
+                </div>
+            </div>
+
+            <div class="states">
+                <div class="ancestor_states">
+                    <%= render 'states/printall', states: @ancestor_states %>
+                </div>
+                <%= render 'layouts/error_messages', object: @state %>
+                <div class="child_states" id="anchor">
+                    <div class="for_container">
+
+                        <div class="for_form">
+                            <label for="for_button">賛成＋</label>
+                            <input type="checkbox" id="for_button" name="for_against">
+                            <%= render 'states/newform', position: 1 %>
+                        </div>
+                        <div class="for_states mt_5px">
+                            <%= render 'states/printall', states: @for_states %>
+                        </div>
+
+                    </div>
+                    <div class="against_container">
+
+                        <div class="against_form">
+                            <label for="against_button">反対＋</label>
+                            <input type="checkbox" id="against_button" name="for_against">
+                            <%= render 'states/newform', position: -1 %>
+                        </div>
+                        <div class="against_states mt_5px">
+                            <%= render 'states/printall', states: @against_states %>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

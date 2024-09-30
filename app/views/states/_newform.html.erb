@@ -1,0 +1,11 @@
+<%= form_with model: @state, local: true, url: {controller: "states", action: "create"} do |f| %>
+	<div class="field">
+		<%= f.hidden_field :position, value: position %>
+	</div>
+	<div class="field">
+		<%= f.text_area :content, autofocus: true, autocomplete: "content", class: "form-text-area" %>
+	</div>
+	<div class="actions mt-0px">
+		<%= f.submit "送信", class: "btn btn-mini" %>
+	</div>
+<% end %>

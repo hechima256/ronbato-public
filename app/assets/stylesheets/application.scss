@@ -1,0 +1,191 @@
+/*
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*= require_tree .
+*= require_self
+*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    a{
+        text-decoration: none;
+        color: black;
+    }
+}
+html{
+    font:  100%/1 "Hiragino Sans", "游ゴシック", sans-serif;
+    line-height: 1.5;
+}
+
+
+.content_wrapper{
+    min-height: 100vh;
+}
+
+.application_wrapper{
+    header{
+        display: flex;
+        justify-content: space-between; //左右分裂
+        width: 100vw;
+        height: 60px;
+        background: rgb(26, 221, 174);
+        .header_left{
+            display: flex;
+            width: auto;
+            height: 100%;
+            div{
+                a{
+                    display: flex;
+                    justify-content: center; //中央
+                    align-items: center; //中央
+                    width: auto;
+                    height: 100%;
+                    padding: 0 15px;
+                }
+            }
+            .logo{
+                a{
+                    font-size: 150%;
+                    font-weight: 600;
+                    color: rgb(74, 74, 74);
+                }
+            }
+
+        }
+        .header_right{
+            display: flex;
+            width: auto;
+            height: 100%;
+            div{
+                .nav_item{
+                    // background: red;
+                    display: flex;
+                    flex-flow: column;
+                    justify-content: flex-end; // 中央
+                    align-items: center; // 中央
+                    min-width: 70px;
+                    height: 100%;
+                    padding: 5px 10px;
+                    color: white;
+                    i{
+                        // text-align: center;
+                        font-size: 22px;
+                        font-style: normal;
+                    }
+                    div{
+                        margin-top: 4px;
+                        font-size: 12px;
+                        font-style: normal;
+                        text-transform: none;
+                    }
+                }
+                a.nav_item{
+                    &:hover{
+                        background: rgba(0, 0, 0, 0.2);
+                    }
+                }
+            }
+        }
+    }
+    // flash messages
+    .flash{
+        width: 100%;
+        padding: 0.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+    .notice{
+        background: rgb(135, 235, 110);
+    }
+    .alert{
+        background: tomato;
+    }
+
+    footer{
+        display: flex;
+        justify-content: space-between; //左右分裂
+        width: 100vw;
+        height: 160px;
+        background: rgb(26, 221, 174);
+        .footer_left{
+            width: auto;
+            height: 100%;
+            padding: 1em;
+            div{
+                a{
+
+                }
+            }
+            .logo{
+                font-size: 150%;
+                font-weight: 600;
+                color: rgb(65, 65, 65);
+                letter-spacing: 2px;
+            }
+        }
+        .footer_right{
+            display: flex;
+            align-items: flex-start; //中央 縦
+            width: auto;
+            height: 100%;
+            margin-right: 50px;
+            padding: 1em 0;
+            ul{
+                li{
+                    // text-align: right;
+                    list-style: none;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+menu#under_menu{
+    display: flex;
+    position: sticky;
+    bottom: 0;
+    width: 100vw;
+    height: 55px;
+    background: rgba(0, 0, 0, 0.8);
+    div{
+        width: calc(100% / 3);
+        height: 100%;
+        a{
+            display: flex;
+            justify-content: center; //中央 横
+            align-items: center; //中央 縦
+            width: 100%;
+            height: 100%;
+            color: white;
+            font-weight: 600;
+            &:hover{
+                background: rgba(128, 126, 127, 0.3);
+            }
+            i{
+                text-align: center;
+                font-size: 20px;
+                p{
+                    margin-top: 4px;
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 770px){
+
+}

@@ -1,0 +1,41 @@
+<div class="users_wrapper">
+    <div class="registration_wrapper">
+        <div class="centering_container pt-3em">
+            <h1>アカウントを編集</h1>
+            <p>パスワードは、空白にした場合には変更されません。</p>
+
+            <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+              <%= render "devise/shared/error_messages", resource: resource %>
+              <div class="edit-field">
+
+                  <div class="field">
+                    <%= f.label :name, "ユーザー名" %>
+                    <%= f.text_field :name, autofocus: true, autocomplete: "name", class: "form-text" %>
+                  </div>
+
+                  <div class="field">
+                      <%= f.label :password, "変更後パスワード" %>
+                      <%= f.password_field :password, autocomplete: "new-password", class: "form-text" %>
+                  </div>
+
+                  <div class="field">
+                      <%= f.label :password_confirmation, "変更後パスワード(再入力)" %>
+                      <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-text" %>
+                  </div>
+              </div>
+
+
+              <div class="field">
+                <%= f.label :current_password %>
+                <%= f.password_field :current_password, autocomplete: "current-password", class: "form-text" %>
+              </div>
+
+              <div class="actions mt-30px">
+                <%= f.submit "更新", class: "btn btn-primary mb-10px" %>
+              </div>
+            <% end %>
+            <%= link_to "戻る", :back, class: "btn btn-normal mb-10px" %>
+            <%= button_to "アカウントを削除", registration_path(resource_name), data: { confirm: "本当にアカウントを削除しますか？削除すると元に戻せなくなります。" }, method: :delete, class: "btn btn-danger mt-40px mb-10px" %>
+        </div>
+    </div>
+</div>

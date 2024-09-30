@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ろんばと</title>
+        <meta charset="utf-8">
+        <meta name="description" content="ろんばとはオンラインでディベートができるサイトです。">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <%= csrf_meta_tags %>
+        <%= csp_meta_tag %>
+
+        <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= stylesheet_link_tag 'css/all.min.css', media: 'all'%>
+        <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </head>
+
+    <body>
+        <div class="application_wrapper">
+            <header>
+                <div class="header_left">
+                    <div class="logo">
+                        <%= link_to("ろんばと", root_path) %>
+                    </div>
+                    <!-- <div class="about">
+                        <%= link_to("about", "#") %>
+                    </div> -->
+                </div>
+                <div class="header_right">
+                    <!-- <div class="notice">
+                        <%= link_to("#", class: "nav_item") do %>
+                            <i class="fa-solid fa-bell"></i>
+                            <div>お知らせ</div>
+                        <% end %>
+                    </div> -->
+
+                    <% if user_signed_in? %>
+                        <div class="logout">
+                            <%= link_to(destroy_user_session_path, data: { confirm: "ログアウトしますか？" }, method: :delete, class: "nav_item") do %>
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                                <div>ログアウト</div>
+                            <% end %>
+                        </div>
+                        <div class="account">
+                            <%= link_to(edit_user_registration_path, class: "nav_item") do %>
+                                <i class="fa-solid fa-user"></i>
+                                <div><%= current_user.name %></div>
+                            <% end %>
+                        </div>
+                    <% else %>
+                        <div class="login">
+                            <%= link_to(new_user_session_path, class: "nav_item") do %>
+                                <i class="fa-solid fa-right-to-bracket"></i>
+                                <div>ログイン</div>
+                            <% end %>
+                        </div>
+                        <div class="sign_up">
+                            <%= link_to(new_user_registration_path, class: "nav_item") do %>
+                                <i class="fa-solid fa-user-plus"></i>
+                                <div>アカウント作成</div>
+                            <% end %>
+                        </div>
+                    <% end %>
+                </div>
+            </header>
+            <% if flash[:notice] %>
+            <div class="flash notice">
+                <%= flash[:notice] %>
+            </div>
+            <% end %>
+            <% if flash[:alert] %>
+            <div class="flash alert">
+                <%= flash[:alert] %>
+            </div>
+            <% end %>
+
+        </div>
+        <div class="content_wrapper">
+            <%= yield %>
+        </div>
+        <div class="application_wrapper">
+            <footer>
+                <div class="footer_left">
+                    <div class="logo">
+                        <%= link_to("ろんばと", root_path) %>
+                    </div>
+                </div>
+                <div class="footer_right">
+                    <ul>
+						<li><%= link_to("利用規約", "/terms") %></li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+        <menu id="under_menu">
+            <div class="home">
+                <%= link_to(topics_path) do %>
+                    <i class="fa-solid fa-house"><p>ホーム</p></i>
+                <% end %>
+            </div>
+            <div class="new">
+                <%= link_to(new_topic_path) do %>
+                    <i class="fa-solid fa-circle-plus"><p>作成</p></i>
+                <% end %>
+            </div>
+            <div class="favorite">
+                <%= link_to(new_user_registration_path) do %>
+                    <i class="fa-solid fa-star"><p>とうろく</p></i>
+                <% end %>
+            </div>
+        </menu>
+
+    </body>
+</html>

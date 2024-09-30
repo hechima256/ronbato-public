@@ -1,0 +1,19 @@
+<% if states.empty? %>
+    <div class="state">
+        まだ主張はありません。
+    </div>
+<% else %>
+    <% states.each do |state| %>
+		<div class="mb-5px">
+			<%= link_to("/topics/#{state.topic.hashid}/states/#{state.hashid}#anchor", class: "state #{state.state_class} #{state.multi}") do %>
+	            <%= simple_format(h(state.content)) %>
+	        <% end %>
+			<% if state.descendants.count > 1 %>
+				<div class="children_indicator_shadow">
+				</div>
+				<div class="children_indicator">
+				</div>
+			<% end %>
+		</div>
+    <% end %>
+<% end %>

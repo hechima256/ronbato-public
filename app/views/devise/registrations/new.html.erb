@@ -1,0 +1,35 @@
+<div class="users_wrapper">
+    <div class="registration_wrapper">
+        <div class="centering_container pt-3em">
+            <h1>アカウント作成</h1>
+			<p>アカウントの作成をもって<%= link_to("利用規約", "/terms", class: "text-link") %>に同意したこととみなします。 </p>
+            <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+              <%= render "devise/shared/error_messages", resource: resource %>
+
+              <div class="field">
+                <%= f.label :name, "ユーザー名" %>
+                <%= f.text_field :name, autofocus: true, autocomplete: "name", class: "form-text" %>
+              </div>
+
+              <div class="field">
+                <%= f.label :password %>
+                <% if @minimum_password_length %>
+                <em>(<%= @minimum_password_length %>文字以上)</em>
+                <% end %>
+                <%= f.password_field :password, autocomplete: "new-password", class: "form-text" %>
+              </div>
+
+              <div class="field">
+                <%= f.label :password_confirmation %>
+                <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-text" %>
+              </div>
+
+              <div class="actions mt-30px">
+                <%= f.submit "作成", class: "btn btn-primary mb-10px" %>
+              </div>
+            <% end %>
+
+            <%= render "devise/shared/links" %>
+        </div>
+    </div>
+</div>

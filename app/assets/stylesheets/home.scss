@@ -1,0 +1,90 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.home_wrapper{
+    .top_wrapper{
+        .btn{
+            width: 200px;
+            height: 2.5em;
+            border: 1px solid black;
+            border-radius: 2em;
+            background: rgb(37, 209, 188);
+        }
+        .btn:hover{
+            background: rgb(46, 184, 167);
+        }
+
+        .positon_center{
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .top_message{
+            text-align: center;
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0 1em;
+            padding-top: 150px;
+            padding-bottom: 10px;
+            background-image: url("/top.png");
+            // background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            a{
+                color: white;
+                font-size: 1.1em;
+            }
+        }
+        .top_message h1{
+            font-size: 250%;
+        }
+        .top_message p.about{
+            margin-top: 1em;
+            font-size: 120%;
+        }
+
+        .account, .login{
+            font-size: 120%;
+            color: white;
+            margin: 10px auto;
+        }
+        .account{
+            margin-top: 150px;
+        }
+        .lets_start{
+            font-size: 140%;
+            margin-top: 3em;
+        }
+
+        main{
+
+        }
+
+
+
+
+        @media screen and (max-width: 770px){
+            .top_message{
+                padding-top: 100px;
+            }
+            .top_message h2{
+                font-size: 150%;
+            }
+            .top_message p.about{
+                font-size: 100%;
+            }
+            .account{
+                margin-top: 50px;
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+<div class="home_wrapper">
+    <div class="top_wrapper">
+        <div class="top_message">
+            <h1>さあ、討論をしよう</h1>
+            <p class="about">ろんばとはオンラインでディベートができるサイトです。</p>
+
+            <div class="btn_wrapper">
+                <%= link_to("アカウント作成", new_registration_path(resource_name), class: "btn account positon_center") %>
+                <%= link_to("ログイン", new_session_path(resource_name), class: "btn login positon_center") %>
+            </div>
+
+            <div class="lets_start">
+                <%= link_to("今すぐ始める＞", "/topics") %>
+            </div>
+        </div>
+        <main>
+
+        </main>
+    </div>
+</div>

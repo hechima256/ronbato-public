@@ -1,0 +1,20 @@
+<div class="topics_wrapper">
+    <div class="index_wrapper">
+        <h1>トピック一覧</h1>
+        <div class="topics_container">
+            <% @topics.each do |topic| %>
+            <div class="topic_index_item">
+                <%= link_to(topic_path(topic.hashid), class: "topic_container") do %>
+                <div class="image_container">
+                    <%= image_tag("/topics_imgs/#{topic.image}") %>
+                </div>
+                <div class="text_container">
+                    <h2 class="topic_title"><%= topic.title %></h2>
+                    <p><%= topic.description %></p>
+                </div>
+                <% end %>
+            </div>
+            <%end%>
+        </div>
+    </div>
+</div>

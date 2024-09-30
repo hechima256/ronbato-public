@@ -1,0 +1,158 @@
+// button (input or link)
+.btn{
+    // reset
+    outline: none;
+    padding: 0;
+    appearance: none;
+    border-style: none;
+    border: none;
+    //
+    // for link
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //
+    width: 100%;
+    height: 48px;
+    border-radius: 4px;
+    font-size: 20px;
+    font-weight: bold;
+    // default color
+    color: white;
+    background: black;
+    //
+    &:hover{
+        cursor: pointer;
+    }
+}
+.btn-mini{
+    height: 36px;
+    font-size: 16px;
+}
+.btn-primary{
+    color: white;
+    background: rgb(37, 209, 188);
+    &:hover{
+        background: rgb(15, 179, 159);
+    }
+}
+
+.btn-normal{
+    color: rgb(37, 209, 188);
+    background: white;
+    border: rgb(37, 209, 188) 2px solid;
+    &:hover{
+        background: rgb(214, 214, 214);
+    }
+}
+.btn-danger{
+    color: white;
+    // background: rgb(198, 53, 53);
+    background: tomato;
+    &:hover{
+        background: rgb(199, 71, 49);
+    }
+}
+// button
+
+
+//padding
+.pt-3em{
+    padding-top: 3em;
+}
+.pb-3em{
+    padding-bottom: 3em;
+}
+
+// margin
+.mt_5px{
+	margin-top: 5px;
+}
+.mt-10px{
+    margin-top: 10px;
+}
+.mt-30px{
+	margin-top: 30px;
+}
+.mt-40px{
+    margin-top: 40px;
+}
+
+.mb-5px{
+    margin-bottom: 5px;
+}
+.mb-10px{
+    margin-bottom: 10px;
+}
+.mb-50px{
+    margin-bottom: 50px;
+}
+//
+
+// links
+.text-link{
+    color: #0000ee;
+    &:hover{
+        text-decoration: underline;
+    }
+    &:visited{
+        color: #551b8c;
+    }
+}
+
+// centering
+.centering_container{
+    width: 100%;
+    max-width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+//
+// error messages
+#error_explanation{
+    p{
+        color: tomato;
+    }
+}
+//
+// form
+form{
+    .field{
+        margin-bottom: 15px;
+        label{
+            font-size: 18px;
+            color: rgb(50, 50, 50);
+        }
+        .form-text{
+            font-size: 120%;
+            width: 100%;
+            height: 40px;
+            padding: 10px;
+            border-radius: 3px;
+            border: 1px rgb(180, 180, 180) solid;
+            &:focus{
+                outline: none;
+                border: 2px #52a3ff solid;
+            }
+        }
+        textarea.form-text-area{
+            resize: vertical;
+            font-size: 120%;
+            width: 100%;
+            min-height: 120px;
+            padding: 10px;
+            border-radius: 3px;
+            border: 1px rgb(180, 180, 180) solid;
+            &:focus{
+                outline: none;
+                border: 2px #52a3ff solid;
+            }
+        }
+    }
+    .actions{
+
+    }
+}
+//
