@@ -12,24 +12,26 @@
 
 ### スクリーンショット
 
-#### ホームページ
 <div align="center">
-  <img src="docs/images/demo/ronbato_toppage.png" alt="ホームページ" width="600">
+  <table>
+    <tr>
+      <td width="33%" align="center">
+        <img src="docs/images/demo/ronbato_toppage.png" alt="ろんばとのホームページ - トピック一覧とディベート参加機能" style="width: 100%; max-width: 400px; height: auto;">
+        <br><sub>ホームページ - トピック一覧とディベート参加機能</sub>
+      </td>
+      <td width="33%" align="center">
+        <img src="docs/images/demo/ronbato_flow.png" alt="議論ツリー - 賛成・反対意見の構造化された表示" style="width: 100%; max-width: 400px; height: auto;">
+        <br><sub>議論ツリー - 賛成・反対意見の構造化された表示</sub>
+      </td>
+      <td width="33%" align="center">
+        <img src="docs/images/demo/ronbato_mac_vs_win.png" alt="議論詳細画面 - Mac vs Windows の具体的な議論内容と返答システム" style="width: 100%; max-width: 400px; height: auto;">
+        <br><sub>議論詳細画面 - Mac vs Windows の具体的な議論内容と返答システム</sub>
+      </td>
+    </tr>
+  </table>
 </div>
 
-#### 議論ツリー表示
-<div align="center">
-  <img src="docs/images/demo/ronbato_flow.png" alt="議論ツリー - 賛成・反対意見の構造化された表示" width="500">
-</div>
-
-各トピックの議論は、賛成・反対の立場を明確にしたツリー構造で視覚化されます。
-
-#### 議論詳細画面
-<div align="center">
-  <img src="docs/images/demo/ronbato_mac_vs_win.png" alt="議論詳細 - 具体的な主張と返答の表示" width="500">
-</div>
-
-ユーザーは各主張に対して詳細な議論を展開し、多角的な視点から意見を交換できます。
+各トピックの議論は、賛成・反対の立場を明確にしたツリー構造で視覚化され、ユーザーは各主張に対して詳細な議論を展開し、多角的な視点から意見を交換できます。
 
 ## 🌟 特徴
 
